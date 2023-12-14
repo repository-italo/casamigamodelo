@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .pride-flag {
+      width: 90%;
+      max-width: 300px; /* Define um máximo para não ficar muito grande em telas largas */
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stripe {
+      height: 25%;
+      position: relative;
+      overflow: hidden;
+      background-color: #FF0018; /* Cor estática para cada faixa */
+    }
+
+    .stripe::before,
+    .stripe::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #f0f0f0; /* Cor de fundo da borda circular */
+      border-radius: 50%;
+    }
+
+    .stripe::before {
+      transform: scale(1, 2);
+      left: -50%;
+    }
+
+    .stripe::after {
+      transform: scale(1, 2);
+      right: -50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="pride-flag">
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+  </div>
+</body>
+</html>
